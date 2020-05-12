@@ -23,6 +23,9 @@ var game = new Phaser.Game(config);
 	var carte2;
 	
 	var paire1 = 0;
+	
+	var win = 0;
+	var wintext;
 
 
 
@@ -45,18 +48,51 @@ function preload(){
 
 function create(){
 	
-	this.add.image(250, 190,'backcard').setScale(.5)
-	this.add.image(250, 300,'backcard').setScale(.5)
-	this.add.image(250, 410,'backcard').setScale(.5)
-	this.add.image(350, 190,'backcard').setScale(.5)
-	this.add.image(350, 300,'backcard').setScale(.5)
-	this.add.image(350, 410,'backcard').setScale(.5)
-	this.add.image(450, 190,'backcard').setScale(.5)
-	this.add.image(450, 300,'backcard').setScale(.5)
-	this.add.image(450, 410,'backcard').setScale(.5)
-	this.add.image(550, 190,'backcard').setScale(.5)
-	this.add.image(550, 300,'backcard').setScale(.5)
-	this.add.image(550, 410,'backcard').setScale(.5)
+	this.back1 = this.add.image(250, 190,'backcard').setScale(.5).setInteractive();
+	this.back2 = this.add.image(250, 300,'backcard').setScale(.5).setInteractive();
+	this.back3 = this.add.image(250, 410,'backcard').setScale(.5).setInteractive();
+	this.back4 = this.add.image(350, 190,'backcard').setScale(.5).setInteractive();
+	this.back5 = this.add.image(350, 300,'backcard').setScale(.5).setInteractive();
+	this.back6 = this.add.image(350, 410,'backcard').setScale(.5).setInteractive();
+	this.back7 = this.add.image(450, 190,'backcard').setScale(.5).setInteractive();
+	this.back8 = this.add.image(450, 300,'backcard').setScale(.5).setInteractive();
+	this.back9 = this.add.image(450, 410,'backcard').setScale(.5).setInteractive();
+	this.back10 = this.add.image(550, 190,'backcard').setScale(.5).setInteractive();
+	this.back11 = this.add.image(550, 300,'backcard').setScale(.5).setInteractive();
+	this.back12 = this.add.image(550, 410,'backcard').setScale(.5).setInteractive();
+	
+	this.back1.setInteractive();
+	this.back1.on("pointerout",()=>{
+			
+		})
+		this.back1.on("pointerdown",()=>{
+			paire1 += 1;
+			
+			this.add.image(250, 190,'carteAC').setScale(.5);
+		})
+	
+	this.back4.setInteractive();
+	this.back4.on("pointerout",()=>{
+			
+		})
+		this.back4.on("pointerdown",()=>{
+			paire1 += 1;
+			this.add.image(350, 190,'carteAC').setScale(.5);
+		})
+	
+	/*this.back8.setInteractive();
+	this.back8.on("pointerout",()=>{
+			
+		})
+		this.back8.on("pointerdown",()=>{
+			paire1 += 1;
+			this.add.image(450, 300,'carte5C').setScale(.5);
+		})*/
+	
+	
+	
+	
+	
 	
 	
 	
@@ -67,6 +103,17 @@ function create(){
 }
 
 function update(){
+	
+	if (paire1 == 2){
+		win += 1;
+	}
+	
+	if (win == 1){
+		wintext = this.add.text(320, 50, 'Vous gagnez !', {fontSize: '20px', fill:'#FFF'});
+	}
+	
+	
+	
 	
 	//Si on clique sur carte 1 
 		// alors -> paire 1 += 1;
