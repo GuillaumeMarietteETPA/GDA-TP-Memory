@@ -23,6 +23,9 @@ var game = new Phaser.Game(config);
 	var carte2;
 	
 	var paire1 = 0;
+	
+	var win = 0;
+	var wintext;
 
 
 
@@ -101,7 +104,13 @@ function create(){
 
 function update(){
 	
+	if (paire1 = 2){
+		win += 1;
+	}
 	
+	if (win = 1){
+		wintext = this.add.text(320, 50, 'Vous gagnez !', {fontSize: '20px', fill:'#FFF'});
+	}
 	
 	
 	
