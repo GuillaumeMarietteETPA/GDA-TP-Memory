@@ -45,18 +45,39 @@ function preload(){
 
 function create(){
 	
-	this.add.image(250, 190,'backcard').setScale(.5)
-	this.add.image(250, 300,'backcard').setScale(.5)
-	this.add.image(250, 410,'backcard').setScale(.5)
-	this.add.image(350, 190,'backcard').setScale(.5)
-	this.add.image(350, 300,'backcard').setScale(.5)
-	this.add.image(350, 410,'backcard').setScale(.5)
-	this.add.image(450, 190,'backcard').setScale(.5)
-	this.add.image(450, 300,'backcard').setScale(.5)
-	this.add.image(450, 410,'backcard').setScale(.5)
-	this.add.image(550, 190,'backcard').setScale(.5)
-	this.add.image(550, 300,'backcard').setScale(.5)
-	this.add.image(550, 410,'backcard').setScale(.5)
+	this.back1 = this.add.image(250, 190,'backcard').setScale(.5).setInteractive();
+	this.back2 = this.add.image(250, 300,'backcard').setScale(.5).setInteractive();
+	this.back3 = this.add.image(250, 410,'backcard').setScale(.5).setInteractive();
+	this.back4 = this.add.image(350, 190,'backcard').setScale(.5).setInteractive();
+	this.back5 = this.add.image(350, 300,'backcard').setScale(.5).setInteractive();
+	this.back6 = this.add.image(350, 410,'backcard').setScale(.5).setInteractive();
+	this.back7 = this.add.image(450, 190,'backcard').setScale(.5).setInteractive();
+	this.back8 = this.add.image(450, 300,'backcard').setScale(.5).setInteractive();
+	this.back9 = this.add.image(450, 410,'backcard').setScale(.5).setInteractive();
+	this.back10 = this.add.image(550, 190,'backcard').setScale(.5).setInteractive();
+	this.back11 = this.add.image(550, 300,'backcard').setScale(.5).setInteractive();
+	this.back12 = this.add.image(550, 410,'backcard').setScale(.5).setInteractive();
+	
+	this.back1.setInteractive();
+	this.back1.on("pointerout",()=>{
+			
+		})
+		this.back1.on("pointerdown",()=>{
+			this.add.image(250, 190,'carteAC').setScale(.5);
+		})
+	
+	this.back4.setInteractive();
+	this.back4.on("pointerout",()=>{
+			
+		})
+		this.back4.on("pointerdown",()=>{
+			this.add.image(350, 190,'carteAC').setScale(.5);
+		})
+	
+	
+	
+	
+	
 	
 	
 	
