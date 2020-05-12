@@ -104,11 +104,11 @@ function create(){
 
 function update(){
 	
-	if (paire1 = 2){
+	if (paire1 == 2){
 		win += 1;
 	}
 	
-	if (win = 1){
+	if (win == 1){
 		wintext = this.add.text(320, 50, 'Vous gagnez !', {fontSize: '20px', fill:'#FFF'});
 	}
 	
