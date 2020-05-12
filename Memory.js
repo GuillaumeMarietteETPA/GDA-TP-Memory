@@ -21,24 +21,34 @@ var game = new Phaser.Game(config);
 
 	var carte 1;
 	var carte 2;
+	
+	var paire 1 = 0;
 
 
 
 
 function preload(){
 	
+	this.load.image('backcard','assets/cardBack_blue5.png');
 	
-	
+	//ICI charger les images des cartes
 }
 
 
 function create(){
 	
-	
+	//Créer cartes
+	//ajouter fonction random pour les mélanger
 	
 }
 
 function update(){
 	
+	//Si on clique sur carte 1 
+		// alors -> paire 1 += 1;
+		
+		
+	//Si on clique sur carte 2
+		// alors -> paire 1 += 1;
 	
 }
