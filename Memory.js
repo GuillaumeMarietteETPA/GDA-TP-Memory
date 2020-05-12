@@ -19,10 +19,10 @@ scene: {
 
 var game = new Phaser.Game(config);
 
-	var carte 1;
-	var carte 2;
+	var carte1;
+	var carte2;
 	
-	var paire 1 = 0;
+	var paire1 = 0;
 
 
 
@@ -38,13 +38,6 @@ function preload(){
 	this.load.image('carte10C','assets/cardHearts10.png');
 	this.load.image('carteQC','assets/cardHeartsQ.png');
 	
-	this.load.image('carteAP','assets/cardSpadesA.png');
-	this.load.image('carte2P','assets/cardSpades2.png');
-	this.load.image('carte5P','assets/cardSpades5.png');
-	this.load.image('carte7P','assets/cardSpades7.png');
-	this.load.image('carte10P','assets/cardSpades10.png');
-	this.load.image('carteQP','assets/cardSpadesQ.png');
-	
 	
 	//ICI charger les images des cartes
 }
@@ -52,8 +45,18 @@ function preload(){
 
 function create(){
 	
-	
-	
+	this.add.image(250, 190,'backcard').setScale(.5)
+	this.add.image(250, 300,'backcard').setScale(.5)
+	this.add.image(250, 410,'backcard').setScale(.5)
+	this.add.image(350, 190,'backcard').setScale(.5)
+	this.add.image(350, 300,'backcard').setScale(.5)
+	this.add.image(350, 410,'backcard').setScale(.5)
+	this.add.image(450, 190,'backcard').setScale(.5)
+	this.add.image(450, 300,'backcard').setScale(.5)
+	this.add.image(450, 410,'backcard').setScale(.5)
+	this.add.image(550, 190,'backcard').setScale(.5)
+	this.add.image(550, 300,'backcard').setScale(.5)
+	this.add.image(550, 410,'backcard').setScale(.5)
 	
 	
 	
