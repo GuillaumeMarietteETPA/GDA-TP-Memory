@@ -63,6 +63,8 @@ function create(){
 			
 		})
 		this.back1.on("pointerdown",()=>{
+			paire1 += 1;
+			
 			this.add.image(250, 190,'carteAC').setScale(.5);
 		})
 	
@@ -71,8 +73,18 @@ function create(){
 			
 		})
 		this.back4.on("pointerdown",()=>{
+			paire1 += 1;
 			this.add.image(350, 190,'carteAC').setScale(.5);
 		})
+	
+	/*this.back8.setInteractive();
+	this.back8.on("pointerout",()=>{
+			
+		})
+		this.back8.on("pointerdown",()=>{
+			paire1 += 1;
+			this.add.image(450, 300,'carte5C').setScale(.5);
+		})*/
 	
 	
 	
@@ -88,6 +100,11 @@ function create(){
 }
 
 function update(){
+	
+	
+	
+	
+	
 	
 	//Si on clique sur carte 1 
 		// alors -> paire 1 += 1;
